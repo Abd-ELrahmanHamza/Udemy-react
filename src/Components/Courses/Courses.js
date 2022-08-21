@@ -1,3 +1,5 @@
+// ts-check
+
 // Import CSS
 import "./Courses.css";
 
@@ -7,7 +9,20 @@ import Card from "../Card/Card";
 // Import bootstrap components
 import Carousel from "react-bootstrap/Carousel";
 
+/**
+ *
+ * @param {String} title The title of the courses section
+ * @param {String} description The description of the courses section
+ * @param {Array} courses Array of courses
+ * @returns  {React.ReactElement}
+ */
 const Courses = ({ title, description, courses }) => {
+  /**
+   *
+   * @param {Array} data - Array contains all courses
+   * @param {Integer} n - The size of group
+   * @returns {2D Array} - Array contains a group of courses represented by arrays
+   */
   function groupCourses(data, n) {
     var group = [];
     for (var i = 0, j = 0; i < data.length; i++) {
@@ -18,6 +33,10 @@ const Courses = ({ title, description, courses }) => {
     return group;
   }
 
+  /**
+   * Array contains a group of courses represented by arrays each array has 5 courses
+   * @type {2D Array}
+   */
   let groupedCourses = groupCourses(courses, 5);
   return (
     <section className="courses-section">
