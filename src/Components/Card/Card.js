@@ -1,8 +1,16 @@
+//ts-check
+
 // Import CSS
 import "./Card.css";
 
 // Import react icons
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
+
+/**
+ *
+ * @param {Object} course An object that contains course details
+ * @returns {React.ReactElement}
+ */
 const Card = ({ course }) => {
   return (
     <div className="course">
