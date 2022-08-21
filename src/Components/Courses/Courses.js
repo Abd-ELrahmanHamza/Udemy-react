@@ -7,43 +7,36 @@ import Card from "../Card/Card";
 // Import bootstrap components
 import Carousel from "react-bootstrap/Carousel";
 
-const Courses = () => {
+const Courses = ({ title, description, courses }) => {
+  function groupCourses(data, n) {
+    var group = [];
+    for (var i = 0, j = 0; i < data.length; i++) {
+      if (i >= n && i % n === 0) j++;
+      group[j] = group[j] || [];
+      group[j].push(data[i]);
+    }
+    return group;
+  }
+
+  let groupedCourses = groupCourses(courses, 5);
   return (
     <section className="courses-section">
       <div>
-        <h2 className="career-title">
-          Expand your career opportunities with Python
-        </h2>
-        <p className="courses-paragraph">
-          Take one of Udemy’s range of Python courses and learn how to code
-          using this incredibly useful language. Its simple syntax and
-          readability makes Python perfect for Flask, Django, data science, and
-          machine learning. You’ll learn how to build everything from games to
-          sites to apps. Choose from a range of courses that will appeal to both
-          beginners and advanced developers alike.
-        </p>
+        <h2 className="career-title">{title}</h2>
+        <p className="courses-paragraph">{description}</p>
         <button className="my-btn explore">Explore Python</button>
       </div>
 
       <Carousel>
-        <Carousel.Item>
-          <div className="courses" id="courses">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="courses" id="courses">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-          </div>
-        </Carousel.Item>
+        {groupedCourses.map((group, index) => (
+          <Carousel.Item key={index}>
+            <div className="courses" id="courses">
+              {group.map((course) => (
+                <Card key={course.id} course={course}></Card>
+              ))}
+            </div>
+          </Carousel.Item>
+        ))}
       </Carousel>
     </section>
   );
