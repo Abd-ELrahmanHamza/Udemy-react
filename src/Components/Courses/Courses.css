@@ -37,33 +37,8 @@
   color: black;
 }
 
-.course {
-  width: 240px;
-  margin: 2rem 0;
-}
-
 .course-title {
   margin: 0.5rem 0;
-}
-
-.course-instructor {
-  color: #6a6f73;
-  margin: 0;
-  font-size: 13px;
-}
-
-.course-students {
-  color: #6a6f73;
-  margin: 0;
-  font-size: 13px;
-  display: inline;
-  font-weight: lighter;
-}
-
-.stars {
-  margin: 0.5rem 0 0.5rem 0;
-  color: #e59819;
-  font-weight: bold;
 }
 
 .courses {
@@ -72,47 +47,15 @@
   flex-wrap: wrap;
 }
 
-.course-discount {
-  color: #6a6f73;
-  margin: 0;
-  font-size: 13px;
-  display: inline;
-  font-weight: lighter;
-  text-decoration: line-through;
-  font-style: italic;
-}
-
-.course-price {
-  margin: 0.5rem 0;
-  display: inline-block;
-}
-.course-rate {
-  color: #b4695b;
-  font-style: normal;
-}
-
-.best-seller {
-  background-color: #eceb98;
-  color: #3d3c0a;
-}
-
-.best-seller {
-  display: block;
-  width: fit-content;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 6px;
-}
-
 .carousel-control-next,
 .carousel-control-prev {
-  border: 1px solid #6a6f73;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-  background-color: #1c1d1f;
-  height: 3em;
-  width: 3em;
-  border-radius: 100%;
-  margin: auto;
+  border: 1px solid #6a6f73 !important;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%) !important;
+  background-color: #1c1d1f !important;
+  height: 3em !important;
+  width: 3em !important;
+  border-radius: 100% !important;
+  margin: auto !important;
 }
 
 .course-item:hover {

@@ -1,0 +1,63 @@
+.course {
+  width: 240px;
+  margin: 2rem 0;
+}
+
+.course-instructor {
+  color: #6a6f73;
+  margin: 0;
+  font-size: 13px;
+}
+
+.stars {
+  margin: 0.5rem 0 0.5rem 0;
+  color: #e59819;
+  font-weight: bold;
+}
+
+.course-rate {
+  color: #b4695b;
+  font-style: normal;
+}
+
+.course-students {
+  color: #6a6f73;
+  margin: 0;
+  font-size: 13px;
+  display: inline;
+  font-weight: lighter;
+}
+
+.course-price {
+  margin: 0.5rem 0;
+  display: inline-block;
+}
+
+.course-discount {
+  color: #6a6f73;
+  margin: 0;
+  font-size: 13px;
+  display: inline;
+  font-weight: lighter;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.best-seller {
+  background-color: #eceb98;
+  color: #3d3c0a;
+}
+
+.best-seller {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px;
+}
+
+.stars {
+  margin: 0.5rem 0 0.5rem 0;
+  color: #e59819;
+  font-weight: bold;
+}
