@@ -1,17 +1,39 @@
+// ts-check
+
 // Import components
 import Courses from "../../Components/Courses/Courses";
 
 // Import CSS
 import "./Home.css";
 
+/**
+ *
+ * This is the Home page it contains only main section which contains the courses
+ *
+ * @component
+ * @returns {React.ReactElement}  <Home>  Home  component
+ *
+ */
 const Home = () => {
+  /**
+   * Title of the courses section
+   * @type {string}
+   */
   const title = "Expand your career opportunities with Python";
+  /**
+   * Description of the courses section
+   * @type {string}
+   */
   const description = `Take one of Udemy’s range of Python courses and learn how to code
           using this incredibly useful language. Its simple syntax and
           readability makes Python perfect for Flask, Django, data science, and
           machine learning. You’ll learn how to build everything from games to
           sites to apps. Choose from a range of courses that will appeal to both
           beginners and advanced developers alike.`;
+  /**
+   * Array of courses
+   * @type {Array}
+   */
   const courses = [
     {
       id: 1,
