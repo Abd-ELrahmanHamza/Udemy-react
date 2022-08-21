@@ -5,7 +5,7 @@ import Courses from "../../Components/Courses/Courses";
 import "./Home.css";
 const Home = () => {
   return (
-    <main className="container">
+    <main className="my-container">
       <Courses></Courses>
     </main>
   );

@@ -14,12 +14,12 @@ const Card = () => {
       ></img>
       <a href="https://www.udemy.com/course/complete-python-bootcamp/">
         <h4 className="course-title">
-          AWS Certified Cloud Practitioner - Updated 2020
+          Learn Python: The Complete Python Programming Course
         </h4>
       </a>
       <p className="course-instructor">Alan Rodrigues</p>
       <div className="stars">
-        <i className="course-rate">4.604651</i>
+        <i className="course-rate">4.6</i>
         <BsStarFill />
         <BsStarFill />
         <BsStarFill />
