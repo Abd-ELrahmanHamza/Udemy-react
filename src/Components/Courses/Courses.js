@@ -21,7 +21,7 @@ const Courses = ({ title, description, courses }) => {
    *
    * @param {Array} data - Array contains all courses
    * @param {Integer} n - The size of group
-   * @returns {2D Array} - Array contains a group of courses represented by arrays
+   * @returns {Array} - Array contains a group of courses represented by arrays
    */
   function groupCourses(data, n) {
     var group = [];
@@ -35,7 +35,7 @@ const Courses = ({ title, description, courses }) => {
 
   /**
    * Array contains a group of courses represented by arrays each array has 5 courses
-   * @type {2D Array}
+   * @type {Array}
    */
   let groupedCourses = groupCourses(courses, 5);
   return (
