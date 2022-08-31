@@ -39,25 +39,36 @@ const Courses = ({ title, description, courses }) => {
    */
   let groupedCourses = groupCourses(courses, 5);
   return (
-    <section className="courses-section">
-      <div>
-        <h2 className="career-title">{title}</h2>
-        <p className="courses-paragraph">{description}</p>
-        <button className="my-btn explore">Explore Python</button>
-      </div>
+    <>
+      <ul class="courses-list">
+        <li class="course-item active">Python</li>
+        <li class="course-item">Excel</li>
+        <li class="course-item">Web development</li>
+        <li class="course-item">Javascript</li>
+        <li class="course-item">Data science</li>
+        <li class="course-item">AWS Certification</li>
+        <li class="course-item">Drawing</li>
+      </ul>
+      <section className="courses-section">
+        <div>
+          <h2 className="career-title">{title}</h2>
+          <p className="courses-paragraph">{description}</p>
+          <button className="my-btn explore">Explore Python</button>
+        </div>
 
-      <Carousel>
-        {groupedCourses.map((group, index) => (
-          <Carousel.Item key={index}>
-            <div className="courses" id="courses">
-              {group.map((course) => (
-                <Card key={course.id} course={course}></Card>
-              ))}
-            </div>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </section>
+        <Carousel>
+          {groupedCourses.map((group, index) => (
+            <Carousel.Item key={index}>
+              <div className="courses" id="courses">
+                {group.map((course) => (
+                  <Card key={course.id} course={course}></Card>
+                ))}
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </section>
+    </>
   );
 };
 
