@@ -6,6 +6,7 @@ import "./Home.css";
 // Import components
 import Courses from "../../Components/Courses/Courses";
 import Navbar from "../../Components/Navbar/Navbar";
+import Alarm from "../../Components/Alarm/Alarm";
 
 /**
  *
@@ -172,6 +173,7 @@ const Home = () => {
     <>
       <Navbar></Navbar>
       <main className="my-container">
+        <Alarm />
         <Courses
           title={title}
           description={description}
