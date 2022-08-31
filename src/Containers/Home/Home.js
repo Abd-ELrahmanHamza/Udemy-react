@@ -1,10 +1,11 @@
 // ts-check
 
-// Import components
-import Courses from "../../Components/Courses/Courses";
-
 // Import CSS
 import "./Home.css";
+
+// Import components
+import Courses from "../../Components/Courses/Courses";
+import Navbar from "../../Components/Navbar/Navbar";
 
 /**
  *
@@ -168,13 +169,16 @@ const Home = () => {
   ];
 
   return (
-    <main className="my-container">
-      <Courses
-        title={title}
-        description={description}
-        courses={courses}
-      ></Courses>
-    </main>
+    <>
+      <Navbar></Navbar>
+      <main className="my-container">
+        <Courses
+          title={title}
+          description={description}
+          courses={courses}
+        ></Courses>
+      </main>
+    </>
   );
 };
 
