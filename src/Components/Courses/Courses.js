@@ -40,14 +40,14 @@ const Courses = ({ title, description, courses }) => {
   let groupedCourses = groupCourses(courses, 5);
   return (
     <>
-      <ul class="courses-list">
-        <li class="course-item active">Python</li>
-        <li class="course-item">Excel</li>
-        <li class="course-item">Web development</li>
-        <li class="course-item">Javascript</li>
-        <li class="course-item">Data science</li>
-        <li class="course-item">AWS Certification</li>
-        <li class="course-item">Drawing</li>
+      <ul className="courses-list">
+        <li className="course-item active">Python</li>
+        <li className="course-item">Excel</li>
+        <li className="course-item">Web development</li>
+        <li className="course-item">Javascript</li>
+        <li className="course-item">Data science</li>
+        <li className="course-item">AWS Certification</li>
+        <li className="course-item">Drawing</li>
       </ul>
       <section className="courses-section">
         <div>
