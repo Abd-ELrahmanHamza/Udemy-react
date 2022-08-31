@@ -3,9 +3,9 @@ import "./App.css";
 
 // Import components
 import Home from "./Containers/Home/Home";
+import Course from "./Containers/Course/Course";
 
 // Import react router dom
-import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/course" element={<Course />} />
       </Routes>
     </BrowserRouter>
   );
