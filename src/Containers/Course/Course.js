@@ -2,11 +2,12 @@
 import "./Course.css";
 
 // Import components
-import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
+
 const Course = () => {
   return (
     <>
-      <Navbar />
+      <Footer />
     </>
   );
 };
