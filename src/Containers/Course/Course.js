@@ -2,8 +2,8 @@
 import styles from "./Course.module.css";
 
 // Import components
-import Footer from "../../Components/Footer/Footer";
 import CourseIntro from "../../Components/CourseIntro/CourseIntro";
+import Companies from "../../Components/Companies/Companies";
 
 const Course = () => {
   return (
@@ -14,7 +14,7 @@ const Course = () => {
           <CourseIntro />
         </div>
       </div>
-      <Footer />
+      <Companies />
     </>
   );
 };

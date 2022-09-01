@@ -1,0 +1,22 @@
+.companies {
+  background-color: #1c1d1f;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #3e4143;
+  align-items: center;
+}
+
+.top-companies {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.company-img {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.udemy-business {
+  color: #cec0fc;
+}
