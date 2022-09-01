@@ -1,0 +1,64 @@
+.title,
+.description {
+  color: white;
+  margin: 5px;
+  padding: 0;
+}
+
+.description{
+    font-weight: lighter;
+}
+
+.course-intro {
+  background-color: #1c1d1f;
+}
+
+.stars {
+  margin: 0.5rem 0 0.5rem 0;
+  color: #e59819;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.course-rate {
+  color: #b4695b;
+  font-style: normal;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.course-ratings {
+  color: #6a6f73;
+  margin: 0 5px;
+  font-size: 17px;
+  display: inline;
+  font-weight: lighter;
+  color: #cec0fc;
+  text-decoration: underline;
+}
+.course-ratings:hover {
+  color: #cec0fc;
+}
+
+.course-students {
+  color: white;
+  margin: 0 5px;
+  font-size: 17px;
+  display: inline;
+  font-weight: lighter;
+}
+
+.created-by {
+  color: white;
+}
+
+.captions {
+  color: white;
+  margin: 0;
+}
+
+.captions-inner {
+  margin-right: 10px;
+  display: inline-block;
+}
