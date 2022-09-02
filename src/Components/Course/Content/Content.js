@@ -1,4 +1,5 @@
 // Import css
+import ContentList from "../ContentList/ContentList";
 import styles from "./Content.module.css";
 
 const Content = () => {
@@ -9,6 +10,7 @@ const Content = () => {
         <p>15 sections • 146 lectures • 14h 42m total length</p>
         <button className={styles["expand"]}>Expand all sections</button>
       </div>
+      <ContentList />
     </div>
   );
 };
