@@ -9,6 +9,7 @@ const ContentList = () => {
       <ContentItem />
       <ContentItem />
       <ContentItem />
+      <button className={styles["more-sections-btn"]}>5 more sections</button>
     </div>
   );
 };

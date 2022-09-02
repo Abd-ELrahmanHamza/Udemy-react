@@ -6,8 +6,12 @@
   padding: 20px;
   border-left: 1px solid #d1d7dc;
   border-right: 1px solid #d1d7dc;
-  border-top: 1px solid #d1d7dc;
+  border-bottom: 0.5px solid #d1d7dc;
   cursor: pointer;
+}
+
+.content-item:first-child {
+  border-top: 1px solid #d1d7dc;
 }
 
 .arrow-icon {
@@ -32,16 +36,12 @@
 
 .content-item-body {
   border-left: 1px solid #d1d7dc;
-  border-top: 1px solid #d1d7dc;
   border-right: 1px solid #d1d7dc;
+  border-bottom: 1px solid #d1d7dc;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.content-item:last-child {
-  border-bottom: 1px solid #d1d7dc;
 }
 
 .hide-body {
