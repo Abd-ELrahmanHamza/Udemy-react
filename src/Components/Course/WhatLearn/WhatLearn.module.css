@@ -1,0 +1,20 @@
+.what-learn {
+  border: 1px solid #d1d7dc;
+  margin-top: 70px;
+  padding: 30px;
+}
+
+.learning-objectives-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.learning-objectives {
+  min-width: fit-content;
+}
+
+.objective {
+  display: inline-block;
+  margin-left: 15px ;
+}
