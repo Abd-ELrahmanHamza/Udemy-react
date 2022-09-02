@@ -1,0 +1,12 @@
+.content-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expand {
+  color: #5624d0;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
