@@ -4,8 +4,8 @@
 import "./Home.css";
 
 // Import components
-import Courses from "../../Components/Courses/Courses";
-import Alarm from "../../Components/Alarm/Alarm";
+import Courses from "../../Components/Home/Courses/Courses";
+import Alarm from "../../Components/Home/Alarm/Alarm";
 
 /**
  *

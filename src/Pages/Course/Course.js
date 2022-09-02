@@ -2,8 +2,8 @@
 import styles from "./Course.module.css";
 
 // Import components
-import CourseIntro from "../../Components/CourseIntro/CourseIntro";
-import Companies from "../../Components/Companies/Companies";
+import CourseIntro from "../../Components/Course/CourseIntro/CourseIntro";
+import Companies from "../../Components/Course/Companies/Companies";
 
 const Course = () => {
   return (
