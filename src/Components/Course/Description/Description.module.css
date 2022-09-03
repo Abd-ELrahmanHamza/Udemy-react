@@ -1,0 +1,16 @@
+.description-paragraph::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 200px; /* 100% - (line-height × 3) */
+  transform: translateY(-25px); /* 0 - line-height */
+  background: linear-gradient(rgba(108, 108, 108, 0), #ffffff 100px);
+}
+
+.description-paragraph {
+  height: 200px;
+  overflow: hidden;
+}
