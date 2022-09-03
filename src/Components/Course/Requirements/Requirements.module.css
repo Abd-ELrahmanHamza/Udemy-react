@@ -1,0 +1,8 @@
+.requirements-list-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.item-text {
+  margin-left: 25px;
+}

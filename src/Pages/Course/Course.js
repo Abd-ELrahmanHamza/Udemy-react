@@ -6,6 +6,7 @@ import CourseIntro from "../../Components/Course/CourseIntro/CourseIntro";
 import Companies from "../../Components/Course/Companies/Companies";
 import WhatLearn from "../../Components/Course/WhatLearn/WhatLearn";
 import Content from "../../Components/Course/Content/Content";
+import Requirements from "../../Components/Course/Requirements/Requirements";
 
 const Course = () => {
   return (
@@ -16,6 +17,7 @@ const Course = () => {
           <CourseIntro />
           <WhatLearn />
           <Content />
+          <Requirements />
         </div>
       </div>
       <Companies />
