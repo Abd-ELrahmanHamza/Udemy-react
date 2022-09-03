@@ -1,0 +1,21 @@
+.instructor-link {
+  text-decoration: underline;
+  color: #5624d0;
+  margin-bottom: 0;
+}
+
+.instructor-link:hover {
+  color: #3f1b9c;
+}
+
+.instructor-quote {
+  color: #6a6f73;
+  font-size: 18px;
+}
+
+.instructor-image {
+  border: 1px solid #d1d7dc;
+  border-radius: 50%;
+  width: 6.4rem;
+  height: 6.4rem;
+}
