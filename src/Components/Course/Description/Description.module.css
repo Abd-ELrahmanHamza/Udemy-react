@@ -1,3 +1,7 @@
+.description-paragraph {
+  position: relative;
+}
+
 .description-paragraph::after {
   content: "";
   display: block;
@@ -5,13 +9,13 @@
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100px; /* 100% - (line-height × 3) */
-  transform: translateY(-120px); /*0 - line-height*/
+  height: 55px; /* 100% - (line-height × 3) */
+  /* transform: translateY(-120px); /*0 - line-height */
   background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50px);
   /* background-color: red; */
 }
 
-.description-paragraph {
+.description-paragraph-show-more {
   height: 200px;
   overflow: hidden;
 }

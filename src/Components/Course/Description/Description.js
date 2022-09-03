@@ -3,6 +3,8 @@ import styles from "./Description.module.css";
 
 // Import react icons
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+// Import hooks
 import { useState } from "react";
 
 const Description = () => {
@@ -15,7 +17,11 @@ const Description = () => {
   return (
     <div>
       <h2>Description</h2>
-      <p className={`${showMore ? styles["description-paragraph"] : ""}`}>
+      <p
+        className={`${
+          showMore ? styles["description-paragraph-show-more"] : ""
+        } ${showMore ? styles["description-paragraph"] : ""}`}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis
         inventore reprehenderit quasi officia molestias eligendi possimus
         delectus esse minima aut sunt natus, dolorum quia aliquam iusto itaque?
@@ -44,8 +50,8 @@ const Description = () => {
         assumenda blanditiis non tempore sunt ipsum consectetur quod?
       </p>
       <button className={styles["show-more-btn"]} onClick={handleShowMore}>
-        Show more {showMore && <IoIosArrowDown onClick={showMore} />}{" "}
-        {!showMore && <IoIosArrowUp onClick={showMore} />}
+        Show more {showMore && <IoIosArrowDown />}{" "}
+        {!showMore && <IoIosArrowUp />}
       </button>
     </div>
   );
