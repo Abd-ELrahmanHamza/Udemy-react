@@ -11,6 +11,7 @@ const Description = () => {
   const handleShowMore = () => {
     setShowMore(!showMore);
   };
+
   return (
     <div>
       <h2>Description</h2>
