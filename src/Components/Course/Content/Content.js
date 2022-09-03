@@ -1,6 +1,8 @@
 // Import css
-import ContentList from "../ContentList/ContentList";
 import styles from "./Content.module.css";
+
+// Import components
+import ContentList from "../ContentList/ContentList";
 
 const Content = () => {
   return (

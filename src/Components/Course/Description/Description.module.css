@@ -14,3 +14,12 @@
   height: 200px;
   overflow: hidden;
 }
+
+.show-more-btn {
+  color: #5624d0;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  position: relative;
+}
