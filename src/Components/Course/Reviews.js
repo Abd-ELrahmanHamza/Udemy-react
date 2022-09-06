@@ -5,6 +5,9 @@ import styles from "../../Style/Components/Course/Reviews.module.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 
+// Import components
+import Review from "./Review";
+
 const Reviews = () => {
   return (
     <div className={styles["reviews-container"]}>
@@ -35,6 +38,12 @@ const Reviews = () => {
           </span>
         </div>
       </div>
+      <div>
+        <Review />
+        <Review />
+        <Review />
+      </div>
+      <button className={styles["more-sections-btn"]}>Show more reviews</button>
     </div>
   );
 };
