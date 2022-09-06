@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 // Import image
 import instructor from "../../../Assets/Images/instructor.jpg";
+
 const Instructors = () => {
   return (
     <div>

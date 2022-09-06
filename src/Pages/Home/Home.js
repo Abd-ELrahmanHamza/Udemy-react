@@ -1,7 +1,7 @@
 // ts-check
 
 // Import CSS
-import "./Home.css";
+import "../../Style/Pages/Home/Home.css";
 
 // Import components
 import Courses from "../../Components/Home/Courses/Courses";

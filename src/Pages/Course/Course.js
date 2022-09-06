@@ -1,5 +1,5 @@
 // Import css
-import styles from "./Course.module.css";
+import styles from "../../Style/Pages/Course/Course.module.css";
 
 // Import components
 import CourseIntro from "../../Components/Course/CourseIntro/CourseIntro";
