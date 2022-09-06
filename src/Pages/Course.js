@@ -2,13 +2,13 @@
 import styles from "../Style/Pages/Course/Course.module.css";
 
 // Import components
-import CourseIntro from "../Components/Course/CourseIntro/CourseIntro";
-import Companies from "../Components/Course/Companies/Companies";
-import WhatLearn from "../Components/Course/WhatLearn/WhatLearn";
-import Content from "../Components/Course/Content/Content";
-import Requirements from "../Components/Course/Requirements/Requirements";
-import Description from "../Components/Course/Description/Description";
-import Instructors from "../Components/Course/Instuctors/Instructors";
+import CourseIntro from "../Components/Course/CourseIntro";
+import Companies from "../Components/Course/Companies";
+import WhatLearn from "../Components/Course/WhatLearn";
+import Content from "../Components/Course/Content";
+import Requirements from "../Components/Course/Requirements";
+import Description from "../Components/Course/Description";
+import Instructors from "../Components/Course/Instructors";
 
 const Course = () => {
   return (

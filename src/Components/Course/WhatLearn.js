@@ -1,5 +1,5 @@
 // Import css
-import styles from "./WhatLearn.module.css";
+import styles from "../../Style/Components/Course/WhatLearn.module.css";
 
 // Import react icons
 import { AiOutlineCheck } from "react-icons/ai";

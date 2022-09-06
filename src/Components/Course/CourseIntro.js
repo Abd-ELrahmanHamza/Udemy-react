@@ -1,5 +1,5 @@
 // Import css
-import styles from "./CourseIntro.module.css";
+import styles from "../../Style/Components/Course/CourseIntro.module.css";
 
 // Import react icons
 import {

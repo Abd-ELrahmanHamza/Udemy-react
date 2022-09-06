@@ -1,5 +1,5 @@
 // Import CSS
-import styles from "./Description.module.css";
+import styles from "../../Style/Components/Course/Description.module.css";
 
 // Import react icons
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";

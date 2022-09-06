@@ -1,12 +1,12 @@
 // Import css
-import styles from "./Companies.module.css";
+import styles from "../../Style/Components/Course/Companies.module.css";
 
 // Import images
-import nasdaq from "../../../Assets/Images/nasdaq-light.svg";
-import netapp from "../../../Assets/Images/netapp-light.svg";
-import box from "../../../Assets/Images/box-light.svg";
-import eventbrite from "../../../Assets/Images/eventbrite-light.svg";
-import volkswagen from "../../../Assets/Images/volkswagen-light.svg";
+import nasdaq from "../../Assets/Images/nasdaq-light.svg";
+import netapp from "../../Assets/Images/netapp-light.svg";
+import box from "../../Assets/Images/box-light.svg";
+import eventbrite from "../../Assets/Images/eventbrite-light.svg";
+import volkswagen from "../../Assets/Images/volkswagen-light.svg";
 
 const Companies = () => {
   return (

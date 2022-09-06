@@ -1,5 +1,5 @@
 // Import CSS
-import styles from "./Requirements.module.css";
+import styles from "../../Style/Components/Course/Requirements.module.css";
 
 // Import react icons
 import { BsCircleFill } from "react-icons/bs";

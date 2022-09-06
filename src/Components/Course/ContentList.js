@@ -1,8 +1,8 @@
 // Import css
-import styles from "./ContentList.module.css";
+import styles from "../../Style/Components/Course/ContentList.module.css";
 
 // Import components
-import ContentItem from "../ContentItem/ContentItem";
+import ContentItem from "./ContentItem";
 const ContentList = () => {
   return (
     <div className={styles["ContentList"]}>
