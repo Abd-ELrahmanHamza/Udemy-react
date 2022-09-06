@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const CourseIntro = () => {
   return (
-    <>
+    <div className={styles["course-intro"]}>
       <h1 className={styles["title"]}>
         Python Beyond the Basics - Object-Oriented Programming
       </h1>
@@ -56,7 +56,7 @@ const CourseIntro = () => {
           <span> English </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
