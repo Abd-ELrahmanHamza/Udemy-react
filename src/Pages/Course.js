@@ -9,6 +9,7 @@ import Content from "../Components/Course/Content";
 import Requirements from "../Components/Course/Requirements";
 import Description from "../Components/Course/Description";
 import Instructors from "../Components/Course/Instructors";
+import StudentFeedback from "../Components/Course/StudentFeedback";
 
 const Course = () => {
   return (
@@ -23,6 +24,7 @@ const Course = () => {
           <Requirements />
           <Description />
           <Instructors />
+          <StudentFeedback />
         </div>
       </div>
       <Companies />
