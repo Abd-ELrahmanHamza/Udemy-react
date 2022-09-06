@@ -1,7 +1,7 @@
 //ts-check
 
 // Import CSS
-import "./Card.css";
+import "../../Style/Components/Home/Card.css";
 
 // Import react icons
 import { BsStarHalf, BsStarFill } from "react-icons/bs";

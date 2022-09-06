@@ -1,11 +1,11 @@
 // ts-check
 
 // Import CSS
-import "../../Style/Pages/Home/Home.css";
+import "../Style/Pages/Home/Home.css";
 
 // Import components
-import Courses from "../../Components/Home/Courses/Courses";
-import Alarm from "../../Components/Home/Alarm/Alarm";
+import Courses from "../Components/Home/Courses";
+import Alarm from "../Components/Home/Alarm";
 
 /**
  *

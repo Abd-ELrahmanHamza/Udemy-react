@@ -2,8 +2,8 @@
 import "./App.css";
 
 // Import components
-import Home from "./Pages/Home/Home";
-import Course from "./Pages/Course/Course";
+import Home from "./Pages/Home";
+import Course from "./Pages/Course";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 

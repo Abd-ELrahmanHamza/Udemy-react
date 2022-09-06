@@ -1,10 +1,10 @@
 // ts-check
 
 // Import CSS
-import "./Courses.css";
+import "../../Style/Components/Home/Courses.css";
 
 // Import components
-import Card from "../Card/Card";
+import Card from "./Card";
 
 // Import bootstrap components
 import Carousel from "react-bootstrap/Carousel";

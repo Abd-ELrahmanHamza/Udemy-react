@@ -1,8 +1,8 @@
 // Import alarm image
-import alarm from "../../../Assets/Images/alarm.jpg";
+import alarm from "../../Assets/Images/alarm.jpg";
 
 // Import CSS
-import "./Alarm.css";
+import "../../Style/Components/Home/Alarm.css";
 const Alarm = () => {
   return (
     <>
