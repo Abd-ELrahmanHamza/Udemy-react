@@ -1,8 +1,8 @@
 // Import css
-import "./Navbar.css";
+import "../Style/Components/Navbar.css";
 
 // Import logo
-import logo from "../../Assets/Images/logo-udemy.svg";
+import logo from "../Assets/Images/logo-udemy.svg";
 
 // Import react icons
 import { BsGlobe } from "react-icons/bs";

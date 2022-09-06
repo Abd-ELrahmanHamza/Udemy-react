@@ -1,8 +1,8 @@
 // Import css
-import styles from "./Footer.module.css";
+import styles from "../Style/Components/Footer.module.css";
 
 // Import logo
-import logo from "../../Assets/Images/logo-udemy-inverted.svg";
+import logo from "../Assets/Images/logo-udemy-inverted.svg";
 
 // Import react router dom components
 import { Link } from "react-router-dom";
