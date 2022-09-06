@@ -10,6 +10,7 @@ import Requirements from "../Components/Course/Requirements";
 import Description from "../Components/Course/Description";
 import Instructors from "../Components/Course/Instructors";
 import StudentFeedback from "../Components/Course/StudentFeedback";
+import Reviews from "../Components/Course/Reviews";
 
 const Course = () => {
   return (
@@ -25,6 +26,7 @@ const Course = () => {
           <Description />
           <Instructors />
           <StudentFeedback />
+          <Reviews />
         </div>
       </div>
       <Companies />
