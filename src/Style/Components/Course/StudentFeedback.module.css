@@ -2,6 +2,10 @@
   margin: 50px 0;
 }
 
+.rate-container {
+  display: flex;
+}
+
 .rate {
   text-align: center;
   color: #b4690e;
@@ -21,4 +25,12 @@
 .star {
   display: inline-block;
   margin-right: 3px;
+}
+
+.rate-bars-container {
+  flex-grow: 1;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
 }

@@ -4,6 +4,9 @@ import styles from "../../Style/Components/Course/StudentFeedback.module.css";
 // Import react icons
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
 
+// Import components
+import RateBars from "./RateBars";
+
 const StudentFeedback = () => {
   return (
     <div className={styles["student-feedback"]}>
@@ -19,6 +22,13 @@ const StudentFeedback = () => {
             <BsStarHalf size={20} className={styles["star"]} />
           </div>
           <div>Course rating</div>
+        </div>
+        <div className={styles["rate-bars-container"]}>
+          <RateBars />
+          <RateBars />
+          <RateBars />
+          <RateBars />
+          <RateBars />
         </div>
       </div>
     </div>

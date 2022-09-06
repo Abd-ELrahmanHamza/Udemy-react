@@ -1,0 +1,39 @@
+.star {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.rate-bars {
+    width: 100%;
+  flex-grow: 1;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.rate-bar {
+  display: inline-flex;
+  align-items: center;
+  background: #d1d7dc;
+  width: 100%;
+  height: 10px;
+  margin: 0 15px;
+}
+
+.progress {
+  display: inline-block;
+  background: #6a6f73;
+  width: 50%;
+  height: 10px;
+}
+
+.progress-stars {
+  display: inline-block;
+  color: #e68612;
+  min-width: fit-content;
+}
+
+.rate-percent {
+  text-decoration: underline;
+  color: #5624d0;
+}
