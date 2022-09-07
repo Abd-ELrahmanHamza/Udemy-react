@@ -1,10 +1,8 @@
 .container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   width: 85%;
   margin: 50px auto;
-  padding: 0 50px 50px 50px;
   position: relative;
 }
 
@@ -31,4 +29,8 @@
   margin: 0 auto;
   position: relative;
   background-color: #1c1d1f;
+}
+
+.floating-course-container {
+  flex-shrink: 0;
 }

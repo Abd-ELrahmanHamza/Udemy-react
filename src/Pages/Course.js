@@ -11,6 +11,7 @@ import Description from "../Components/Course/Description";
 import Instructors from "../Components/Course/Instructors";
 import StudentFeedback from "../Components/Course/StudentFeedback";
 import Reviews from "../Components/Course/Reviews";
+import FloatingCourse from "../Components/Course/FloatingCourse";
 
 const Course = () => {
   return (
@@ -27,6 +28,9 @@ const Course = () => {
           <Instructors />
           <StudentFeedback />
           <Reviews />
+        </div>
+        <div className={styles["floating-course-container"]}>
+          <FloatingCourse />
         </div>
       </div>
       <Companies />
