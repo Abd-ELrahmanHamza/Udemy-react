@@ -68,6 +68,10 @@
   display: inline-block;
 }
 
+.floating-course-content {
+  display: none;
+}
+
 @media only screen and (max-width: 1080px) {
   .course-intro {
     display: flex;
@@ -126,5 +130,72 @@
     transform: translate(-50%, -300%);
     display: inline-block;
     z-index: 1;
+  }
+
+  .captions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .captions-inner {
+    margin: 5px 0;
+  }
+
+  .floating-course-content {
+    display: block;
+  }
+
+  .price {
+    font-size: 40px;
+    margin: 15px 0;
+    color: white;
+  }
+
+  .btn {
+    display: block;
+    padding: 12px 17px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border: 1px solid #1c1d1f;
+    font-weight: bold;
+    background-color: transparent;
+  }
+
+  .btn:hover {
+    background-color: #d8d8d8;
+  }
+
+  .cart {
+    background-color: #a435f0;
+    color: white;
+  }
+
+  .cart:hover {
+    background-color: #8c2bcd;
+  }
+
+  .money-back {
+    text-align: center;
+    font-size: 13px;
+    margin: 20px;
+    color: white;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+  }
+
+  .link {
+    text-decoration: underline;
+    font-weight: 700;
+    display: inline-block;
+    margin: 3px;
+  }
+
+  .link:hover {
+    cursor: pointer;
   }
 }

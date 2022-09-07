@@ -71,6 +71,19 @@ const CourseIntro = () => {
             <span> English </span>
           </div>
         </div>
+        <div className={styles["floating-course-content"]}>
+          <h2 className={styles["price"]}>E£679.99</h2>
+          <button className={`${styles["btn"]} ${styles["cart"]}`}>
+            Add to cart
+          </button>
+          <p className={styles["money-back"]}>30-Day Money-Back Guarantee</p>
+          <p className={styles["money-back"]}>Full lifetime access</p>
+          <div className={styles["links"]}>
+            <span className={styles["link"]}>Share</span>
+            <span className={styles["link"]}>Gift this course </span>
+            <span className={styles["link"]}>Apply coupon</span>
+          </div>
+        </div>
       </div>
     </div>
   );
