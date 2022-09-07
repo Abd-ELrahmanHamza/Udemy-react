@@ -9,11 +9,48 @@ import { RiFolderDownloadLine } from "react-icons/ri";
 import { IoIosInfinite } from "react-icons/io";
 import { ImMobile } from "react-icons/im";
 import { BsTrophy } from "react-icons/bs";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const FloatingCourse = () => {
+  useEffect(() => {
+    // Add scroll event listener to window
+    window.addEventListener("scroll", handleScroll);
+
+    // cleanup this component
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Ref for floating course div
+  const ref = useRef();
+
+  // Ref for header (image)
+  const headerRef = useRef();
+
+  // Handler for window scroll
+  const handleScroll = () => {
+    if (window.pageYOffset >= 400) {
+      ref.current.style.display = "none";
+      ref.current.classList.add(styles["floating-course-scroll"]);
+      ref.current.classList.remove(styles["floating-course-before-scroll"]);
+      headerRef.current.style.display = "none";
+      ref.current.style.display = "block";
+    } else if (window.pageYOffset < 400) {
+      ref.current.style.display = "none";
+      headerRef.current.style.display = "block";
+      ref.current.classList.add(styles["floating-course-before-scroll"]);
+      ref.current.classList.remove(styles["floating-course-scroll"]);
+      ref.current.style.display = "block";
+    }
+  };
   return (
-    <div className={styles["floating-course"]}>
-      <div className={styles["header"]}>
+    <div
+      className={`${styles["floating-course"]} ${styles["floating-course-before-scroll"]}`}
+      ref={ref}
+    >
+      <div className={styles["header"]} ref={headerRef}>
         <div className={styles["image"]}></div>
         <div className={styles["play-icon"]}>
           <BsFillPlayCircleFill size={70} />
