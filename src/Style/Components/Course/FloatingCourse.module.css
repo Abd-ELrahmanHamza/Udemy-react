@@ -71,3 +71,14 @@
 .cart:hover {
   background-color: #8c2bcd;
 }
+
+.money-back {
+  text-align: center;
+  font-size: 13px;
+  margin: 20px;
+}
+
+.includes-icons {
+  display: inline-block;
+  margin-right: 10px;
+}

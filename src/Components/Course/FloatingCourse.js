@@ -3,6 +3,12 @@ import styles from "../../Style/Components/Course/FloatingCourse.module.css";
 
 // Import icons
 import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BiMoviePlay } from "react-icons/bi";
+import { HiOutlineNewspaper } from "react-icons/hi";
+import { RiFolderDownloadLine } from "react-icons/ri";
+import { IoIosInfinite } from "react-icons/io";
+import { ImMobile } from "react-icons/im";
+import { BsTrophy } from "react-icons/bs";
 
 const FloatingCourse = () => {
   return (
@@ -20,6 +26,40 @@ const FloatingCourse = () => {
           Add to cart
         </button>
         <button className={styles["btn"]}>Buy now</button>
+        <p className={styles["money-back"]}>30-Day Money-Back Guarantee</p>
+        <h4>This course includes:</h4>
+        <div>
+          <p>
+            <BiMoviePlay size={20} className={styles["includes-icons"]} />
+            14 hours on-demand video
+          </p>
+          <p>
+            <HiOutlineNewspaper
+              size={20}
+              className={styles["includes-icons"]}
+            />
+            1 article
+          </p>
+          <p>
+            <RiFolderDownloadLine
+              size={20}
+              className={styles["includes-icons"]}
+            />
+            3 downloadable resources{" "}
+          </p>
+          <p>
+            <IoIosInfinite size={20} className={styles["includes-icons"]} />
+            Full lifetime access
+          </p>
+          <p>
+            <ImMobile size={20} className={styles["includes-icons"]} />
+            Access on mobile and TV
+          </p>
+          <p>
+            <BsTrophy size={20} className={styles["includes-icons"]} />
+            Certificate of completion
+          </p>
+        </div>
       </div>
     </div>
   );
