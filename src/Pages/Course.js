@@ -12,10 +12,12 @@ import Instructors from "../Components/Course/Instructors";
 import StudentFeedback from "../Components/Course/StudentFeedback";
 import Reviews from "../Components/Course/Reviews";
 import FloatingCourse from "../Components/Course/FloatingCourse";
+import Header from "../Components/Course/Header";
 
 const Course = () => {
   return (
     <>
+      <Header />
       <div className={styles["container-course-intro"]}>
         <CourseIntro />
       </div>

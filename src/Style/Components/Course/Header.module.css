@@ -1,0 +1,52 @@
+.header {
+  box-shadow: 0 2px 4px rgb(28 76 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  height: 5.5rem;
+  font-size: 13px;
+  min-width: 610px;
+  padding: 0 25px;
+  width: 100%;
+  color: #fff;
+  background-color: #1c1d1f;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 16%);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+}
+
+.course-rate {
+  color: #f3ca8c;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+.course-ratings {
+  color: #6a6f73;
+  margin: 0 5px;
+  font-size: 17px;
+  display: inline;
+  font-weight: lighter;
+  color: #cec0fc;
+  text-decoration: underline;
+}
+
+.course-ratings:hover {
+  color: #cec0fc;
+}
+
+.course-students {
+  color: white;
+  margin: 0 5px;
+  font-size: 17px;
+  display: inline;
+  font-weight: lighter;
+}

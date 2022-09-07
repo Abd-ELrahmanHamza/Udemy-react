@@ -12,7 +12,7 @@ import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="nav-bar">
       <button className="my-btn search-small">
         <FaBars size={30} />
       </button>
