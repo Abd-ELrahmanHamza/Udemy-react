@@ -19,9 +19,7 @@ const Course = () => {
     <>
       <Header />
       <div className={styles["container-course-intro"]}>
-        <div className={styles["course-intro"]}>
-          <CourseIntro />
-        </div>
+        <CourseIntro />
       </div>
       <div className={styles["outer-container"]}>
         <div className={styles["container"]}>

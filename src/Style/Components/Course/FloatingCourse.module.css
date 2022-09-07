@@ -23,13 +23,10 @@
   animation: fadein 1s;
 }
 
-.header-scroll {
-  display: none;
-}
-
 .header:hover {
   cursor: pointer;
 }
+
 .image {
   height: 220px;
   width: 100%;

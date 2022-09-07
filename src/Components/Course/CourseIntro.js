@@ -7,6 +7,7 @@ import {
   BsStarFill,
   BsExclamationOctagonFill,
   BsGlobe,
+  BsFillPlayCircleFill,
 } from "react-icons/bs";
 import { FaClosedCaptioning } from "react-icons/fa";
 
@@ -16,44 +17,59 @@ import { Link } from "react-router-dom";
 const CourseIntro = () => {
   return (
     <div className={styles["course-intro"]}>
-      <h1 className={styles["title"]}>
-        Python Beyond the Basics - Object-Oriented Programming
-      </h1>
-      CourseHeader
-      <h2 className={styles["description"]}>
-        From Classes To Inheritance - OOP In-Depth For Python Programmers
-      </h2>
-      <div className={styles["stars"]}>
-        <span className={styles["course-rate"]}>
-          {Math.round(4.3 * 10) / 10}
-        </span>
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarFill />
-        <BsStarHalf />
-        <i className="fa-solid fa-star-half-stroke"></i>
-        <Link to="/" className={styles["course-ratings"]}>
-          ({2.944} ratings)
-        </Link>
-        <span className={styles["course-students"]}>10,488 students</span>
-      </div>
-      <p className={styles["created-by"]}>
-        Created by
-        <span className={styles["course-ratings"]}>infinite Skills</span>
-      </p>
-      <div className={styles["captions"]}>
-        <div className={styles["captions-inner"]}>
-          <BsExclamationOctagonFill />
-          <span> Last updated on 9/2022 </span>
+      <div>
+        <div className={styles["header"]}>
+          <div className={styles["image-container"]}>
+            <img
+              className={styles["image"]}
+              src="https://img-c.udemycdn.com/course/750x422/394676_ce3d_5.jpg"
+              alt=""
+            />
+            <div className={styles["play-icon"]}>
+              <BsFillPlayCircleFill size={70} />
+            </div>
+            <h3 className={styles["preview-title"]}>Preview this course</h3>
+          </div>
         </div>
-        <div className={styles["captions-inner"]}>
-          <BsGlobe />
-          <span> English </span>
+        <h1 className={styles["title"]}>
+          Python Beyond the Basics - Object-Oriented Programming
+        </h1>
+        CourseHeader
+        <h2 className={styles["description"]}>
+          From Classes To Inheritance - OOP In-Depth For Python Programmers
+        </h2>
+        <div className={styles["stars"]}>
+          <span className={styles["course-rate"]}>
+            {Math.round(4.3 * 10) / 10}
+          </span>
+          <BsStarFill />
+          <BsStarFill />
+          <BsStarFill />
+          <BsStarFill />
+          <BsStarHalf />
+          <i className="fa-solid fa-star-half-stroke"></i>
+          <Link to="/" className={styles["course-ratings"]}>
+            ({2.944} ratings)
+          </Link>
+          <span className={styles["course-students"]}>10,488 students</span>
         </div>
-        <div className={styles["captions-inner"]}>
-          <FaClosedCaptioning />
-          <span> English </span>
+        <p className={styles["created-by"]}>
+          Created by
+          <span className={styles["course-ratings"]}>infinite Skills</span>
+        </p>
+        <div className={styles["captions"]}>
+          <div className={styles["captions-inner"]}>
+            <BsExclamationOctagonFill />
+            <span> Last updated on 9/2022 </span>
+          </div>
+          <div className={styles["captions-inner"]}>
+            <BsGlobe />
+            <span> English </span>
+          </div>
+          <div className={styles["captions-inner"]}>
+            <FaClosedCaptioning />
+            <span> English </span>
+          </div>
         </div>
       </div>
     </div>

@@ -36,10 +36,7 @@
   background-color: #1c1d1f;
 }
 
-.course-intro {
-  max-width: 50%;
-  min-width: 600px;
-}
+
 
 .floating-course-container {
   flex-shrink: 0;
@@ -56,4 +53,5 @@
     min-width: 600px;
     max-width: 80%;
   }
+
 }
