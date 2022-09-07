@@ -19,20 +19,24 @@ const Course = () => {
     <>
       <Header />
       <div className={styles["container-course-intro"]}>
-        <CourseIntro />
-      </div>
-      <div className={styles["container"]}>
-        <div className={styles["content-container"]}>
-          <WhatLearn />
-          <Content />
-          <Requirements />
-          <Description />
-          <Instructors />
-          <StudentFeedback />
-          <Reviews />
+        <div className={styles["course-intro"]}>
+          <CourseIntro />
         </div>
-        <div className={styles["floating-course-container"]}>
-          <FloatingCourse />
+      </div>
+      <div className={styles["outer-container"]}>
+        <div className={styles["container"]}>
+          <div className={styles["content-container"]}>
+            <WhatLearn />
+            <Content />
+            <Requirements />
+            <Description />
+            <Instructors />
+            <StudentFeedback />
+            <Reviews />
+          </div>
+          <div className={styles["floating-course-container"]}>
+            <FloatingCourse />
+          </div>
         </div>
       </div>
       <Companies />

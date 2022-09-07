@@ -8,7 +8,7 @@
 
 .floating-course-before-scroll {
   position: absolute;
-  transform: translate(-100%, -30%);
+  transform: translate(0, -30%);
 
 }
 
