@@ -115,7 +115,7 @@
     left: 50%;
     color: white;
     transform: translate(-50%, 50%);
-    z-index: 2;
+    z-index: 1;
   }
 
   .preview-title {
@@ -125,6 +125,6 @@
     left: 50%;
     transform: translate(-50%, -300%);
     display: inline-block;
-    z-index: 2;
+    z-index: 1;
   }
 }
