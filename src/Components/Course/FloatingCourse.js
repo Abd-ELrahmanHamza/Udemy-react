@@ -14,7 +14,13 @@ const FloatingCourse = () => {
         </div>
         <h3 className={styles["preview-title"]}>Preview this course</h3>
       </div>
-      <h2>Floating course</h2>
+      <div className={styles["preview-body"]}>
+        <h2 className={styles["price"]}>E£679.99</h2>
+        <button className={`${styles["btn"]} ${styles["cart"]}`}>
+          Add to cart
+        </button>
+        <button className={styles["btn"]}>Buy now</button>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@
   border: 2px solid white;
   position: relative;
   width: 400px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
 }
 
 .header:hover {
@@ -36,4 +37,37 @@
   left: 50%;
   transform: translate(-50%, -300%);
   display: inline-block;
+}
+
+.preview-body {
+  padding: 20px;
+}
+
+.price {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.btn {
+  display: block;
+  padding: 12px 17px;
+  width: 100%;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: 1px solid #1c1d1f;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: #d8d8d8;
+}
+
+.cart {
+  background-color: #a435f0;
+  color: white;
+}
+
+.cart:hover {
+  background-color: #8c2bcd;
 }
