@@ -60,6 +60,19 @@ const FloatingCourse = () => {
             Certificate of completion
           </p>
         </div>
+        <div className={styles["links"]}>
+          <span className={styles["link"]}>Share</span>
+          <span className={styles["link"]}>Gift this course </span>
+          <span className={styles["link"]}>Apply coupon</span>
+        </div>
+      </div>
+      <hr />
+      <div className={styles["udemy-business"]}>
+        <h2>Training 5 or more people?</h2>
+        <p>
+          Get your team access to 17,000+ top Udemy courses anytime, anywhere.
+        </p>
+        <button className={styles["btn"]}>Try Udemy Business</button>
       </div>
     </div>
   );
