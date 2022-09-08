@@ -2,24 +2,23 @@
 import "./App.css";
 
 // Import components
-import Home from "./Pages/Home";
-import Course from "./Pages/Course";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 // Import react router dom
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
+
+// Import routes array
+import routes from "./Routes";
 
 function App() {
+  let element = useRoutes(routes);
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/course" element={<Course />} />
-      </Routes>
+      {element}
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
