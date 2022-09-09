@@ -24,7 +24,6 @@ const Reviews = ({ reviews }) => {
         Math.min(reviews.length, curReviews.length + 5)
       ),
     ]);
-    console.log(" curReviews ", curReviews);
   };
   return (
     <div className={styles["reviews-container"]}>

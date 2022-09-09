@@ -8,15 +8,10 @@ import { BsStarHalf, BsStarFill } from "react-icons/bs";
 import RateBars from "./RateBars";
 
 const StudentFeedback = ({ reviews }) => {
-  console.log(
-    "------------",
-    reviews["ratingDistribution"].map((rate) => rate["count"])
-  );
   let sumReviews = reviews["ratingDistribution"].reduce(
     (previousValue, currentValue) => previousValue + currentValue["count"],
     0
   );
-  console.log(sumReviews);
   return (
     <div className={styles["student-feedback"]}>
       <h2>Student feedback</h2>

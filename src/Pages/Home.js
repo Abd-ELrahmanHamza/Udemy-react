@@ -39,8 +39,6 @@ const Home = () => {
     setCourses(data);
   });
 
-  console.log(courses);
-
   return (
     <>
       <main className="my-container">

@@ -26,7 +26,6 @@ import { useCourseSummary } from "../Contexts/CourseSummary";
 
 const Course = () => {
   const { id } = useParams();
-  console.log(id);
 
   const {
     error,
@@ -41,8 +40,6 @@ const Course = () => {
   } = useFetch(`http://localhost:8000/review/${id}`);
 
   const { courseSummary } = useCourseSummary();
-  console.log("courses = ", course);
-  console.log("reviews = ", reviews);
   return (
     <>
       {isPending && isPendingReview && <Spinner animation="border" />}
