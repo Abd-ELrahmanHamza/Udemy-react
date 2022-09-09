@@ -9,7 +9,7 @@ const Requirements = ({ course, courseSummary }) => {
       <h2>Requirements</h2>
       <ul className={styles["requirements-list"]}>
         {course["details"]["Requirements"].map((requirement) => (
-          <li className={styles["requirements-list-item"]}>
+          <li key={requirement} className={styles["requirements-list-item"]}>
             <BsCircleFill size={8} />
             <span className={styles["item-text"]}>{requirement}</span>
           </li>
