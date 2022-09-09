@@ -10,7 +10,7 @@ const WhatLearn = ({ course, courseSummary }) => {
       <h2>What you'll learn</h2>
       <div className={styles["learning-objectives-container"]}>
         {courseSummary["objectives_summary"].map((objective) => (
-          <p className={styles["learning-objectives"]}>
+          <p key={objective} className={styles["learning-objectives"]}>
             <AiOutlineCheck size={20} />
             <span className={styles["objective"]}>{objective}</span>
           </p>

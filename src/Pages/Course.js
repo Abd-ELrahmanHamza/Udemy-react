@@ -51,7 +51,7 @@ const Course = () => {
               <div className={styles["content-container"]}>
                 <WhatLearn course={course} courseSummary={courseSummary} />
                 <Content />
-                <Requirements />
+                <Requirements course={course} courseSummary={courseSummary} />
                 <Description />
                 <Instructors />
                 <StudentFeedback />
