@@ -40,6 +40,7 @@ const ContentItem = ({ content }) => {
           className={`${styles["content-item-body"]} ${
             !open ? styles["hide-body"] : ""
           }`}
+          key={item["title"]}
         >
           <div className={styles["item-container"]}>
             <div className={styles["item-title-container"]}>
