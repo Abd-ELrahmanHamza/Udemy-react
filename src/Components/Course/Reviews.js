@@ -8,7 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 // Import components
 import Review from "./Review";
 
-const Reviews = () => {
+const Reviews = ({ reviews }) => {
   return (
     <div className={styles["reviews-container"]}>
       <h2>Reviews</h2>
@@ -39,9 +39,9 @@ const Reviews = () => {
         </div>
       </div>
       <div>
-        <Review />
-        <Review />
-        <Review />
+        {reviews.map((review) => (
+          <Review review={review} />
+        ))}
       </div>
       <button className={styles["more-sections-btn"]}>Show more reviews</button>
     </div>

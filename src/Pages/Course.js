@@ -34,13 +34,20 @@ const Course = () => {
     data: course,
   } = useFetch(`http://localhost:8000/data/${id}`);
 
+  const {
+    errorReview,
+    isPendingReview,
+    data: reviews,
+  } = useFetch(`http://localhost:8000/review/${id}`);
+
   const { courseSummary } = useCourseSummary();
   console.log("courses = ", course);
+  console.log("reviews = ", reviews);
   return (
     <>
-      {isPending && <Spinner animation="border" />}
-      {error && <Alert variant="danger">{error}</Alert>}
-      {course && (
+      {isPending && isPendingReview && <Spinner animation="border" />}
+      {error && errorReview && <Alert variant="danger">{error}</Alert>}
+      {course && reviews && (
         <>
           <Header />
           <div className={styles["container-course-intro"]}>
@@ -58,7 +65,7 @@ const Course = () => {
                 />
                 <Instructors course={course} courseSummary={courseSummary} />
                 <StudentFeedback />
-                <Reviews />
+                <Reviews reviews={reviews["results"]} />
               </div>
               <div className={styles["floating-course-container"]}>
                 <FloatingCourse course={course} courseSummary={courseSummary} />
