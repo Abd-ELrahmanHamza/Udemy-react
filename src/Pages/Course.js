@@ -64,7 +64,7 @@ const Course = () => {
                   for_who={course["details"]["for_who"]}
                 />
                 <Instructors course={course} courseSummary={courseSummary} />
-                <StudentFeedback />
+                <StudentFeedback reviews={reviews} />
                 <Reviews reviews={reviews["results"]} />
               </div>
               <div className={styles["floating-course-container"]}>
