@@ -3,6 +3,8 @@ import Card from "./Card";
 
 // Import bootstrap components
 import Carousel from "react-bootstrap/Carousel";
+import { useSearchParams } from "react-router-dom";
+import { Fragment } from "react";
 
 const CourseGroup = ({ courses }) => {
   /**
@@ -27,6 +29,8 @@ const CourseGroup = ({ courses }) => {
    */
   let groupedCourses = groupCourses(courses.items, 5);
 
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log("groupedCourses", groupedCourses);
   return (
     <section className="courses-section">
       <div>
@@ -36,15 +40,27 @@ const CourseGroup = ({ courses }) => {
       </div>
 
       <Carousel>
-        {groupedCourses.map((group, index) => (
-          <Carousel.Item key={index}>
-            <div className="courses" id="courses">
-              {group.map((course) => (
-                <Card key={course.id} course={course}></Card>
-              ))}
-            </div>
-          </Carousel.Item>
-        ))}
+        {groupedCourses.map((group, index) => {
+          if (group.length !== 0)
+            return (
+              <Carousel.Item key={index}>
+                <div className="courses" id="courses">
+                  {group.map((course) => {
+                    if (
+                      searchParams.get("course") === null ||
+                      course.title
+                        .toUpperCase()
+                        .indexOf(searchParams.get("course").toUpperCase()) !==
+                        -1
+                    )
+                      return <Card key={course.id} course={course}></Card>;
+                    else return <Fragment key={course.id}></Fragment>;
+                  })}
+                </div>
+              </Carousel.Item>
+            );
+          else return <Fragment key={index}></Fragment>;
+        })}
       </Carousel>
     </section>
   );

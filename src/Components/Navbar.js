@@ -10,7 +10,31 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 
+// Import react router dom
+import {
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
+
+// Import hooks
+import { useRef } from "react";
+
 const Navbar = () => {
+  // Used for navigation
+  const navigate = useNavigate();
+
+  // Reference for search input
+  const searchRef = useRef();
+
+  // Handler for search query
+  const handleSearch = (event) => {
+    event.preventDefault();
+    navigate({
+      pathname: "/",
+      search: `?${createSearchParams({ course: searchRef.current.value })}`,
+    });
+  };
   return (
     <header className="nav-bar">
       <button className="my-btn search-small">
@@ -33,12 +57,14 @@ const Navbar = () => {
               name="search"
               className="search-input"
               id="search-input"
+              ref={searchRef}
             ></input>
             <input
               type="submit"
               value="search"
               className="my-btn submit-search"
               id="submit-search"
+              onClick={handleSearch}
             ></input>
           </form>
         </div>
