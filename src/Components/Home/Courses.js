@@ -31,8 +31,6 @@ const Courses = () => {
   // Global courses context
   const { courses } = useCourses();
 
-  console.log(courses);
-
   let resultObj = groupByTitle(courses);
 
   const [activeCourse, setActiveCourse] = useState(Object.keys(resultObj)[0]);

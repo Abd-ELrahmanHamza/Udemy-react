@@ -14,7 +14,12 @@ import Reviews from "../Components/Course/Reviews";
 import FloatingCourse from "../Components/Course/FloatingCourse";
 import Header from "../Components/Course/Header";
 
+// Import react router dom
+import { useParams } from "react-router-dom";
+
 const Course = () => {
+  const { id } = useParams();
+  console.log(id);
   return (
     <>
       <Header />

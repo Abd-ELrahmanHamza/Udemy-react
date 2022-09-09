@@ -37,7 +37,6 @@ const CourseGroup = ({ courses }) => {
    */
   let groupedCourses = groupCourses(courses.items, 5);
 
-  console.log("groupedCourses", groupedCourses);
   return (
     <section className="courses-section">
       <div>

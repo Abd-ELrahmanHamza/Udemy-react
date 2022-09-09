@@ -5,6 +5,7 @@ import "../../Style/Components/Home/Card.css";
 
 // Import react icons
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 /**
  *
@@ -19,9 +20,9 @@ const Card = ({ course }) => {
         alt={course["title"]}
         height="135"
       ></img>
-      <a href={course["learn_url"]}>
+      <Link to={`course/${course["id"]}`}>
         <h4 className="course-title">{course["title"]}</h4>
-      </a>
+      </Link>
       <p className="course-instructor">{course["instructor_name"]}</p>
       <div className="stars">
         <i className="course-rate">{Math.round(course["rating"] * 10) / 10}</i>
