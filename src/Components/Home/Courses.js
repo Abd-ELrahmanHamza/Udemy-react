@@ -5,7 +5,21 @@ import "../../Style/Components/Home/Courses.css";
 
 // Import contexts
 import { useCourses } from "../../Contexts/Courses";
+
+// Import components
 import CourseGroup from "./Coursegroup";
+
+// Import contexts
+import { useEffect } from "react";
+import { useState } from "react";
+
+const groupByTitle = (courses) => {
+  let resultObj = {};
+  for (const course of courses) {
+    resultObj[course.title] = course;
+  }
+  return resultObj;
+};
 
 /**
  *
@@ -18,18 +32,41 @@ const Courses = () => {
   // Global courses context
   const { courses } = useCourses();
 
+  console.log(courses);
+
+  let resultObj = groupByTitle(courses);
+
+  const [activeCourse, setActiveCourse] = useState(Object.keys(resultObj)[0]);
+
+  const handleClick = (event) => {
+    setActiveCourse(event.target.textContent);
+  };
+
   return (
     <>
-      <ul className="courses-list">
-        <li className="course-item active">Python</li>
-        <li className="course-item">Excel</li>
-        <li className="course-item">Web development</li>
-        <li className="course-item">Javascript</li>
-        <li className="course-item">Data science</li>
-        <li className="course-item">AWS Certification</li>
-        <li className="course-item">Drawing</li>
-      </ul>
-      <CourseGroup courses={courses[0]} />
+      {resultObj && (
+        <ul className="courses-list">
+          {Object.keys(resultObj).map((title) => {
+            if (activeCourse === title)
+              return (
+                <li
+                  className="course-item active"
+                  key={title}
+                  onClick={handleClick}
+                >
+                  {title}
+                </li>
+              );
+            else
+              return (
+                <li className="course-item" key={title} onClick={handleClick}>
+                  {title}
+                </li>
+              );
+          })}
+        </ul>
+      )}
+      <CourseGroup courses={resultObj[activeCourse]} />
     </>
   );
 };

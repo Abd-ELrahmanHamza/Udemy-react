@@ -33,12 +33,16 @@ const Card = ({ course }) => {
         <i className="fa-solid fa-star-half-stroke"></i>
         <p className="course-students">({course["num_subscribers"]})</p>
       </div>
-      <h4 className="course-price">
-        {course["price"]["discount_price"]["price_string"]}
-      </h4>
-      <p className="course-discount">
-        {course["price"]["list_price"]["price_string"]}
-      </p>
+      {course["price"]["discount_price"] && (
+        <h4 className="course-price">
+          {course["price"]["discount_price"]["price_string"]}
+        </h4>
+      )}
+      {course["price"]["list_price"] && (
+        <p className="course-discount">
+          {course["price"]["list_price"]["price_string"]}
+        </p>
+      )}
       $
       {course["bestseller_badge_content"] && (
         <span className="best-seller">Bestseller</span>
