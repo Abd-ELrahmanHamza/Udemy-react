@@ -52,8 +52,11 @@ const Course = () => {
                 <WhatLearn course={course} courseSummary={courseSummary} />
                 <Content />
                 <Requirements course={course} courseSummary={courseSummary} />
-                <Description course={course} courseSummary={courseSummary} />
-                {/* <Instructors /> */}
+                <Description
+                  description={course["details"]["description"]}
+                  for_who={course["details"]["for_who"]}
+                />
+                <Instructors course={course} courseSummary={courseSummary} />
                 <StudentFeedback />
                 <Reviews />
               </div>

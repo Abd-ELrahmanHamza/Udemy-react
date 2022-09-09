@@ -13,40 +13,38 @@ import { RiMedalLine } from "react-icons/ri";
 import { BsPeopleFill } from "react-icons/bs";
 import Description from "./Description";
 
-const Instructor = () => {
+const Instructor = ({ instructor }) => {
   return (
     <>
       <h2 className={styles["instructor-link"]}>
         <Link to={"/"} className={styles["instructor-link"]}>
-          Stephane Maarek | AWS Certified Cloud Practitioner,Solutions
-          Architect,Developer
+          {instructor["display_name"]}
         </Link>
       </h2>
-      <p className={styles["instructor-quote"]}>
-        Best Selling Instructor, 9x AWS Certified, Kafka Guru
-      </p>
+      <p className={styles["instructor-quote"]}>{instructor["job_title"]}</p>
       <div className={styles["instructor-info"]}>
         <img
-          src={instructor}
+          src={instructor["image_100x100"]}
           alt="instructor"
           className={styles["instructor-image"]}
         />
         <div>
           <div className={styles["instructor-badges"]}>
-            <AiFillStar /> <span>4.4 Instructor Rating</span>
+            <AiFillStar />{" "}
+            <span>{instructor["Instructor_Rating"]} Instructor Rating</span>
           </div>
           <div className={styles["instructor-badges"]}>
-            <RiMedalLine /> <span>73,835 Reviews</span>
+            <RiMedalLine /> <span>{instructor["Reviews"]} Reviews</span>
           </div>
           <div className={styles["instructor-badges"]}>
-            <BsPeopleFill /> <span>891,903 Students</span>
+            <BsPeopleFill /> <span>{instructor["Students"]} Students</span>
           </div>
           <div className={styles["instructor-badges"]}>
-            <AiFillPlayCircle /> <span>16 Courses</span>
+            <AiFillPlayCircle /> <span>{instructor["Courses"]} Courses</span>
           </div>
         </div>
       </div>
-      <Description showTitle={false} />
+      <Description description={instructor["description"]} showTitle={false} />
     </>
   );
 };

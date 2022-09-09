@@ -10,7 +10,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 // Import hooks
 import { useState } from "react";
 
-const Description = ({ course, courseSummary, showTitle }) => {
+const Description = ({ description, for_who, showTitle }) => {
   const [showMore, setShowMore] = useState(true);
 
   const handleShowMore = () => {
@@ -25,9 +25,9 @@ const Description = ({ course, courseSummary, showTitle }) => {
           showMore ? styles["description-paragraph-show-more"] : ""
         } ${showMore ? styles["description-paragraph"] : ""}`}
       >
-        {course["details"]["description"]}
-        {<h2>Who this course is for:</h2>}
-        {course["details"]["for_who"]}
+        {description}
+        {for_who && <h2>Who this course is for:</h2>}
+        {for_who && for_who}
       </div>
       <button className={styles["show-more-btn"]} onClick={handleShowMore}>
         Show more {showMore && <IoIosArrowDown />}{" "}
