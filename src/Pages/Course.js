@@ -57,7 +57,7 @@ const Course = () => {
             <div className={styles["container"]}>
               <div className={styles["content-container"]}>
                 <WhatLearn course={course} courseSummary={courseSummary} />
-                <Content />
+                <Content course={course} courseSummary={courseSummary} />
                 <Requirements course={course} courseSummary={courseSummary} />
                 <Description
                   description={course["details"]["description"]}

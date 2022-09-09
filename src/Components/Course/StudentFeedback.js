@@ -36,7 +36,7 @@ const StudentFeedback = ({ reviews }) => {
         </div>
         <div className={styles["rate-bars-container"]}>
           {reviews["ratingDistribution"].map((rate) => (
-            <RateBars width={((rate["count"] / sumReviews) * 100).toFixed(1)} />
+            <RateBars key={rate["rating"]} width={((rate["count"] / sumReviews) * 100).toFixed(1)} />
           ))}
         </div>
       </div>
