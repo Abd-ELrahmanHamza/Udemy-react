@@ -13,6 +13,7 @@ import routes from "./Routes";
 
 // Import contexts
 import { CoursesProvider } from "./Contexts/Courses";
+import { CourseSummaryProvider } from "./Contexts/CourseSummary";
 
 function App() {
   let element = useRoutes(routes);
@@ -20,9 +21,11 @@ function App() {
   return (
     <>
       <CoursesProvider>
-        <Navbar />
-        {element}
-        <Footer />
+        <CourseSummaryProvider>
+          <Navbar />
+          {element}
+          <Footer />
+        </CourseSummaryProvider>
       </CoursesProvider>
     </>
   );

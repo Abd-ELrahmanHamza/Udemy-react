@@ -14,7 +14,7 @@ import { FaClosedCaptioning } from "react-icons/fa";
 // Import react router dom
 import { Link } from "react-router-dom";
 
-const CourseIntro = () => {
+const CourseIntro = ({ course, courseSummary }) => {
   return (
     <div className={styles["course-intro"]}>
       <div>
@@ -22,7 +22,7 @@ const CourseIntro = () => {
           <div className={styles["image-container"]}>
             <img
               className={styles["image"]}
-              src="https://img-c.udemycdn.com/course/750x422/394676_ce3d_5.jpg"
+              src={courseSummary["image_750x422"]}
               alt=""
             />
             <div className={styles["play-icon"]}>
@@ -31,16 +31,12 @@ const CourseIntro = () => {
             <h3 className={styles["preview-title"]}>Preview this course</h3>
           </div>
         </div>
-        <h1 className={styles["title"]}>
-          Python Beyond the Basics - Object-Oriented Programming
-        </h1>
+        <h1 className={styles["title"]}>{courseSummary["title"]}</h1>
         CourseHeader
-        <h2 className={styles["description"]}>
-          From Classes To Inheritance - OOP In-Depth For Python Programmers
-        </h2>
+        <h2 className={styles["description"]}>{courseSummary["headline"]}</h2>
         <div className={styles["stars"]}>
           <span className={styles["course-rate"]}>
-            {Math.round(4.3 * 10) / 10}
+            {courseSummary["rating"].toFixed(1)}
           </span>
           <BsStarFill />
           <BsStarFill />
@@ -49,30 +45,54 @@ const CourseIntro = () => {
           <BsStarHalf />
           <i className="fa-solid fa-star-half-stroke"></i>
           <Link to="/" className={styles["course-ratings"]}>
-            ({2.944} ratings)
+            (
+            {courseSummary["num_reviews"]
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            ratings)
           </Link>
-          <span className={styles["course-students"]}>10,488 students</span>
+          <span className={styles["course-students"]}>
+            {courseSummary["num_subscribers"]
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+            students
+          </span>
         </div>
         <p className={styles["created-by"]}>
           Created by
-          <span className={styles["course-ratings"]}>infinite Skills</span>
+          {courseSummary["visible_instructors"].map((instructor) => (
+            <span
+              key={instructor["title"]}
+              className={styles["course-ratings"]}
+            >
+              {instructor["title"]}
+            </span>
+          ))}
         </p>
         <div className={styles["captions"]}>
           <div className={styles["captions-inner"]}>
             <BsExclamationOctagonFill />
-            <span> Last updated on 9/2022 </span>
+            <span> Last updated on {courseSummary["last_update_date"]} </span>
           </div>
           <div className={styles["captions-inner"]}>
             <BsGlobe />
-            <span> English </span>
+            {courseSummary["caption_languages"].map((language) => (
+              <span key={language}> {language} </span>
+            ))}
           </div>
           <div className={styles["captions-inner"]}>
             <FaClosedCaptioning />
-            <span> English </span>
+            <span>
+              {courseSummary["caption_languages"].map((language) => (
+                <span key={language}> {language} </span>
+              ))}
+            </span>
           </div>
         </div>
         <div className={styles["floating-course-content"]}>
-          <h2 className={styles["price"]}>E£679.99</h2>
+          <h2 className={styles["price"]}>
+            {courseSummary["price"]["list_price"]["price_string"]}
+          </h2>
           <button className={`${styles["btn"]} ${styles["cart"]}`}>
             Add to cart
           </button>

@@ -5,7 +5,12 @@ import "../../Style/Components/Home/Card.css";
 
 // Import react icons
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+
+// Import react router dom
+import { Link, useNavigate } from "react-router-dom";
+
+// Import contexts
+import { useCourseSummary } from "../../Contexts/CourseSummary";
 
 /**
  *
@@ -13,6 +18,16 @@ import { Link } from "react-router-dom";
  * @returns {React.ReactElement}
  */
 const Card = ({ course }) => {
+  const navigate = useNavigate();
+
+  const { setCourseSummary } = useCourseSummary();
+
+  // Handle click on link
+  const handleClick = (event) => {
+    event.preventDefault();
+    setCourseSummary(course);
+    navigate(`course/${course["id"]}`);
+  };
   return (
     <div className="course">
       <img
@@ -20,7 +35,7 @@ const Card = ({ course }) => {
         alt={course["title"]}
         height="135"
       ></img>
-      <Link to={`course/${course["id"]}`}>
+      <Link to={`course/${course["id"]}`} onClick={handleClick}>
         <h4 className="course-title">{course["title"]}</h4>
       </Link>
       <p className="course-instructor">{course["instructor_name"]}</p>

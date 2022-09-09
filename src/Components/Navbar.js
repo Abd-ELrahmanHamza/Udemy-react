@@ -11,11 +11,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 
 // Import react router dom
-import {
-  createSearchParams,
-  useNavigate,
-  useSearchParams,
-} from "react-router-dom";
+import { createSearchParams, Link, useNavigate } from "react-router-dom";
 
 // Import hooks
 import { useRef } from "react";
@@ -42,9 +38,9 @@ const Navbar = () => {
       </button>
       <div className="header-container">
         <div className="logo">
-          <a href="\">
+          <Link to="/">
             <img src={logo} alt="Udemy logo" width="91" height="34"></img>
-          </a>
+          </Link>
         </div>
         <nav className="categories">Categories</nav>
 
