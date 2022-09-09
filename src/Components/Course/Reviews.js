@@ -8,7 +8,24 @@ import { IoIosArrowDown } from "react-icons/io";
 // Import components
 import Review from "./Review";
 
+// Import hooks
+import { useState } from "react";
+
 const Reviews = ({ reviews }) => {
+  const [curReviews, setCurReviews] = useState(
+    reviews.slice(0, Math.min(5, reviews.length))
+  );
+
+  const addMoreReviews = () => {
+    setCurReviews([
+      ...curReviews,
+      ...reviews.slice(
+        curReviews.length,
+        Math.min(reviews.length, curReviews.length + 5)
+      ),
+    ]);
+    console.log(" curReviews ", curReviews);
+  };
   return (
     <div className={styles["reviews-container"]}>
       <h2>Reviews</h2>
@@ -39,11 +56,18 @@ const Reviews = ({ reviews }) => {
         </div>
       </div>
       <div>
-        {reviews.map((review) => (
-          <Review review={review} />
+        {curReviews.map((review) => (
+          <Review review={review} key={review["id"]} />
         ))}
       </div>
-      <button className={styles["more-sections-btn"]}>Show more reviews</button>
+      {curReviews.length !== reviews.length && (
+        <button
+          className={styles["more-sections-btn"]}
+          onClick={addMoreReviews}
+        >
+          Show more reviews
+        </button>
+      )}
     </div>
   );
 };
