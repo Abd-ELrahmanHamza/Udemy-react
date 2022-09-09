@@ -12,7 +12,7 @@ import { BsTrophy } from "react-icons/bs";
 import { useEffect } from "react";
 import { useRef } from "react";
 
-const FloatingCourse = () => {
+const FloatingCourse = ({ course, courseSummary }) => {
   useEffect(() => {
     // Add scroll event listener to window
     window.addEventListener("scroll", handleScroll);
@@ -51,14 +51,22 @@ const FloatingCourse = () => {
       ref={ref}
     >
       <div className={styles["header"]} ref={headerRef}>
-        <div className={styles["image"]}></div>
-        <div className={styles["play-icon"]}>
-          <BsFillPlayCircleFill size={70} />
+        <div className={styles["image-container"]}>
+          <img
+            className={styles["image"]}
+            src={courseSummary["image_750x422"]}
+            alt=""
+          />
+          <div className={styles["play-icon"]}>
+            <BsFillPlayCircleFill size={70} />
+          </div>
+          <h3 className={styles["preview-title"]}>Preview this course</h3>
         </div>
-        <h3 className={styles["preview-title"]}>Preview this course</h3>
       </div>
       <div className={styles["preview-body"]}>
-        <h2 className={styles["price"]}>E£679.99</h2>
+        <h2 className={styles["price"]}>
+          {courseSummary["price"]["list_price"]["price_string"]}
+        </h2>
         <button className={`${styles["btn"]} ${styles["cart"]}`}>
           Add to cart
         </button>

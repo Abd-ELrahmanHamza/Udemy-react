@@ -49,7 +49,7 @@ const Course = () => {
           <div className={styles["outer-container"]}>
             <div className={styles["container"]}>
               <div className={styles["content-container"]}>
-                <WhatLearn />
+                <WhatLearn course={course} courseSummary={courseSummary} />
                 <Content />
                 <Requirements />
                 <Description />
@@ -58,7 +58,7 @@ const Course = () => {
                 <Reviews />
               </div>
               <div className={styles["floating-course-container"]}>
-                <FloatingCourse />
+                <FloatingCourse course={course} courseSummary={courseSummary} />
               </div>
             </div>
           </div>

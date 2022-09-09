@@ -9,7 +9,6 @@
 .floating-course-before-scroll {
   position: absolute;
   transform: translate(0, -30%);
-
 }
 
 .floating-course-scroll {
@@ -23,30 +22,49 @@
   animation: fadein 1s;
 }
 
+.header {
+  display: block;
+}
+
 .header:hover {
   cursor: pointer;
 }
 
-.image {
-  height: 220px;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+.image-container {
+  position: relative;
+}
 
-  background-image: linear-gradient(
-      180deg,
-      rgba(28, 29, 31, 0) 0%,
-      rgba(28, 29, 31, 0.9) 100%
-    ),
-    url("https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg");
+.image-container:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 29, 31, 0) 0%,
+    rgba(28, 29, 31, 0.9) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .play-icon {
   position: absolute;
-  top: 110px;
+  bottom: 50%;
   left: 50%;
   color: white;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
+  z-index: 1;
 }
 
 .preview-title {
@@ -56,6 +74,7 @@
   left: 50%;
   transform: translate(-50%, -300%);
   display: inline-block;
+  z-index: 1;
 }
 
 .preview-body {
