@@ -10,13 +10,9 @@ import { useRoutes } from "react-router-dom";
 
 // Import routes array
 import routes from "./Routes";
-import useFetch from "./Hooks/useFetch";
-
-// Import hooks
-import { useEffect } from "react";
 
 // Import contexts
-import { CoursesProvider, useCourses } from "./Contexts/Courses";
+import { CoursesProvider } from "./Contexts/Courses";
 
 function App() {
   let element = useRoutes(routes);

@@ -10,7 +10,6 @@ import { useCourses } from "../../Contexts/Courses";
 import CourseGroup from "./Coursegroup";
 
 // Import contexts
-import { useEffect } from "react";
 import { useState } from "react";
 
 const groupByTitle = (courses) => {
