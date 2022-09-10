@@ -13,6 +13,7 @@ import StudentFeedback from "../Components/Course/StudentFeedback";
 import Reviews from "../Components/Course/Reviews";
 import FloatingCourse from "../Components/Course/FloatingCourse";
 import Header from "../Components/Course/Header";
+import SmallNav from "../Components/Course/SmallNav";
 
 // Import react router dom
 import { useParams } from "react-router-dom";
@@ -46,6 +47,7 @@ const Course = () => {
       {error && errorReview && <Alert variant="danger">{error}</Alert>}
       {course && reviews && (
         <>
+          <SmallNav />
           <Header />
           <div className={styles["container-course-intro"]}>
             <CourseIntro course={course} courseSummary={courseSummary} />

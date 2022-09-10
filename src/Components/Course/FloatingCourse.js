@@ -44,6 +44,12 @@ const FloatingCourse = ({ course, courseSummary }) => {
       ref.current.classList.remove(styles["floating-course-scroll"]);
       ref.current.style.display = "block";
     }
+
+    if (window.pageYOffset >= 1200 && window.innerWidth <= 600) {
+      document.getElementById("small-navbar").style.display = "flex";
+    } else {
+      document.getElementById("small-navbar").style.display = "none";
+    }
   };
   return (
     <div
