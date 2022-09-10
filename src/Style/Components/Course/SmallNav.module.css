@@ -8,6 +8,7 @@
   z-index: 10;
   background-color: white;
   width: 100%;
+  display: none;
   animation-name: appear;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
