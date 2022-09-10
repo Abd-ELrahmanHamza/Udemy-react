@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className={styles["header"]}>
-      <div>
+      <div className={styles["main-content"]}>
         <h2 className={styles["title"]}>
           Learn Python: The Complete Python Programming Course
         </h2>
